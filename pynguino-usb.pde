@@ -54,5 +54,9 @@ void loop() {
             pinMode(buffer[1]-48,buffer[2]-48);
             BULK.write(buffer,receivedByte);
         }
+        // Echo response...
+        else {
+            BULK.write(buffer,receivedByte);
+        }
     }
 }
